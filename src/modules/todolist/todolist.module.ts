@@ -1,7 +1,7 @@
-import ITask from "../task/task.module";
+import Task from "../task/task";
 
 export default interface ITodoList {
   Id: string;
   Name: string;
-  Tasks?: ITask[];
+  Tasks?: Task[];
 }

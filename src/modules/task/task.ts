@@ -1,14 +1,22 @@
-import { IsNotEmpty, IsString } from "class-validator";
-import ITask from "./task.module";
+import { Entity, ManyToOne } from 'typeorm';
+import { IsNotEmpty, IsString } from 'class-validator';
+import ITask from './task.module';
+import TodoList from '../todolist/todolist';
 
-export default class Task implements ITask{
-    @IsNotEmpty()
-    finishDate: Date;
+@Entity()
+export default class Task implements ITask {
+//   @IsString()
+  taskId: string;
 
-    doneStatus: boolean;
-    
-    @IsString()
-    @IsNotEmpty()
-    description: string;
+//   @IsNotEmpty()
+  finishDate: Date;
 
+  doneStatus: boolean;
+
+  @IsString()
+  @IsNotEmpty()
+  description: string;
+
+  @ManyToOne(() => TodoList, (todoList) => todoList.Tasks)
+  todoList: TodoList;
 }
