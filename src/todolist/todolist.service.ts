@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 import ITodoListActions from '../modules/todolist/todolist-actions.module';
 import IList from '../modules/todolist/todolist.module';
@@ -41,5 +41,4 @@ export class TodoListService implements ITodoListActions {
     Logger.log(`Added new Task, ${task.description} to the list: ${listId}`);
     return taskId;
   }
-
 }
