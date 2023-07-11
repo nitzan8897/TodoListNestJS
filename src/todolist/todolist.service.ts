@@ -1,9 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
-import ITodoListActions from '../modules/todolist/todolist-actions.module';
-import IList from '../modules/todolist/todolist.module';
-import TodoList from 'src/modules/todolist/todolist';
-import Task from 'src/modules/task/task';
+import ITodoListActions from '../models/todolist/todolist-actions.module';
+import IList from '../models/todolist/todolist.module';
+import TodoList from '../models/todolist/todolist';
+import Task from '../models/task/task';
 import { listIdValidation } from 'src/utils';
 
 @Injectable()

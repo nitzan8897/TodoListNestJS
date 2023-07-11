@@ -11,8 +11,8 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { TodoListService } from './todolist.service';
-import TodoList from 'src/modules/todolist/todolist';
-import Task from 'src/modules/task/task';
+import TodoList from '../models/todolist/todolist';
+import Task from '../models/task/task';
 
 @Controller('todolist')
 export class TodoListController {

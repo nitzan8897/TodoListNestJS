@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import TodoList from 'src/modules/todolist/todolist';
+import TodoList from '../models/todolist/todolist';
 import { ListNotFound } from './messages';
 
 export const listIdValidation = (
